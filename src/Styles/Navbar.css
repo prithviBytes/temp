@@ -1,0 +1,103 @@
+.Navbar {
+  position: fixed;
+  min-width: 250px;
+  height: 100%;
+  background-color: #000;
+  color: #fff;
+  z-index: 4;
+  transition: min-width 0.4s;
+}
+.Navbar-container {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.Brand-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 40px;
+  padding: 0 24px;
+}
+.Brand-logo {
+  color: black;
+  background-color: #fff;
+  padding: 5px;
+  font-size: 35px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.Brand-name {
+  font-size: 26px;
+  font-weight: 500;
+  transition: all 0.4s;
+}
+.Navbar-navigation {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 25px;
+  transition: padding 0.4s;
+}
+.Navbar-item {
+  display: flex;
+  color: #b3b3b3;
+  align-items: center;
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: flex-direction 0.4s;
+}
+.Navbar-item-logo {
+  font-size: 24px;
+  margin-right: 16px;
+}
+.Navbar-item-text {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  transition: font-size 0.4s;
+}
+.Navbar-item:hover {
+  color: #fff;
+}
+.Navbar-item-logo.fa-circle {
+  font-size: 10px;
+}
+.Navbar-toggler {
+  position: absolute;
+  font-size: 30px;
+  bottom: 35px;
+  left: 35px;
+  cursor: pointer;
+  transform: rotate(0deg);
+  transition: all 0.5s;
+}
+
+.Navbar-shrink {
+  min-width: 100px;
+}
+.Navbar-navigation-shrink {
+  padding: 0;
+}
+.Brand-container-shrink {
+  margin: auto;
+}
+.Navbar-item-shrink {
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.Navbar-item-text-shrink {
+  font-size: 12px;
+}
+.Navbar-item-logo-shrink {
+  margin: 0;
+  margin-bottom: 5px;
+}
+.rotate-180 {
+  transform: rotate(540deg);
+}
+.hidden {
+  display: none;
+}

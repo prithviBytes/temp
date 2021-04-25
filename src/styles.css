@@ -1,4 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
+
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+}
 .App {
-  font-family: sans-serif;
-  text-align: center;
+  height: 100vh;
+  background-color: rgb(24, 152, 160);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), #121212);
+  animation: ChangeBackground 20s ease infinite;
+}
+@keyframes ChangeBackground {
+  0% {
+    background-color: rgb(24, 152, 160);
+  }
+  33% {
+    background-color: rgb(208, 40, 56);
+  }
+  67% {
+    background-color: rgb(208, 96, 139);
+  }
 }

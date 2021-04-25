@@ -1,0 +1,8 @@
+.Appbar {
+  position: sticky;
+  top: 0;
+  margin-left: 250px;
+  z-index: 3;
+  color: #fff;
+  background: #000;
+}
