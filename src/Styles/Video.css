@@ -1,0 +1,115 @@
+.VideoPage {
+  margin-left: 100px;
+  padding: 20px;
+  min-height: 100vh;
+}
+.VideoPage-container {
+  display: flex;
+  flex-direction: row;
+}
+.VideoPage-container-left {
+  min-width: 670px;
+  padding: 30px 20px;
+  margin: auto;
+  margin-right: 10px;
+  background: #000;
+  border-radius: 10px;
+}
+.VideoPage-container-right {
+  min-width: 400px;
+  background: #000;
+  border-radius: 10px;
+  padding: 10px;
+  overflow-y: scroll;
+  height: 550px;
+}
+.VideoPage-container-right::-webkit-scrollbar {
+  width: 0;
+}
+.VideoPage-iframe-container {
+  margin: auto;
+  width: 560px;
+}
+.VideoPage-title {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #fff;
+}
+.VideoPage-info {
+  display: flex;
+  color: rgba(170, 170, 170);
+  font-size: 14px;
+  font-weight: 400;
+  height: 40px;
+  margin-top: 10px;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #181818;
+}
+.VideoPage-actions {
+  display: flex;
+  flex-direction: row;
+}
+.VideoPage-action-button {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.VideoPage-additional {
+  display: flex;
+  color: #fff;
+  margin-top: 20px;
+  align-items: center;
+}
+.VideoPage-avatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+.VideoPage-owner {
+  font-size: 14px;
+  font-weight: 500;
+}
+.VideoPage-icon {
+  font-size: 21px;
+  margin-right: 6px;
+}
+.Thumbnail-horizontal {
+  display: flex;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+.Thumbnail-horizontal-content {
+  padding-left: 10px;
+  padding-top: 4px;
+}
+.Thumbnail-horizontal-owner,
+.Thumbnail-horizontal-stats {
+  color: rgba(170, 170, 170);
+  font-size: 12px;
+  font-weight: 400;
+}
+.Thumbnail-horizontal-title {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  line-height: 16px;
+  white-space: nowrap;
+  width: 200px;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+.Thumbnail-horizontal img {
+  width: 168px;
+  height: 94px;
+}

@@ -5,7 +5,7 @@ export default function Navbar() {
     <nav className="Navbar">
       <div className="Navbar-container">
         <div className="Brand-container">
-          <i className="fab fa-artstation Brand-logo"></i>
+          <i className="fas fa-cubes Brand-logo"></i>
           {/* <h2 className="Brand-name">Youtube</h2> */}
         </div>
         <div className="Navbar-navigation">
