@@ -1,9 +1,70 @@
 .Thumbnail-container {
-  max-width: 330px;
-  padding: 15px;
-  background-color: #000;
+  max-width: 270px;
+  border-radius: 10px;
+  margin: 5px;
+  margin-top: 30px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: all 0.4s;
+}
+.Thumbnail-container:hover {
+  background-color: rgba(0, 0, 0, 1);
 }
 .Thumbnail-image {
   width: 100%;
   height: auto;
+}
+.Thumbnail-details {
+  display: flex;
+  padding-top: 10px;
+}
+.Avatar-container {
+  width: 45px;
+  padding-right: 10px;
+}
+.Avatar {
+  width: 32px;
+  border-radius: 50%;
+}
+.Video-title {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  max-height: 40px;
+  overflow: hidden;
+  color: #fff;
+  /* white-space: nowrap;
+  text-overflow: ellipsis; */
+}
+.Video-owner,
+.Video-Additional-details,
+.Video-Additional-details span {
+  color: #aaa;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  max-height: 18px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.Button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: #b3b3b3;
+}
+.Thumbnail-icon {
+  color: #b3b3b3;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.Thumbnail-icon:hover {
+  color: #fff;
+  transform: scale(1.1);
+}
+.Thumbnail[title]:hover {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
 }

@@ -1,0 +1,39 @@
+.Snackbar {
+  z-index: 999;
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  color: #fff;
+  display: flex;
+  padding: 15px 20px;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  border-radius: 3px;
+  /* background-color: rgb(0, 184, 96); */
+  /* background-color: rgb(208, 40, 56); */
+  transform: translateY(0);
+  transition: all 0.4s cubic-bezier(0.72, 1.06, 0.18, 0.95);
+}
+.Snackbar-Visible {
+  transform: translateY(0) !important;
+}
+.Snackbar-hidden {
+  transform: translateY(100px) !important;
+}
+
+.Snackbar p {
+  font-weight: 500;
+  line-height: 1.43;
+  letter-spacing: 0.5px;
+  font-size: 17px;
+  align-items: center;
+}
+.Snackbar button {
+  font-size: 20px;
+  color: #fff;
+  background: inherit;
+  border: none;
+  margin-left: 10px;
+  cursor: pointer;
+}

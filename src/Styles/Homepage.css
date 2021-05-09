@@ -1,0 +1,11 @@
+.Homepage {
+  margin-left: 120px;
+  transition: all 0.4s;
+}
+.ThumbnailList-container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}

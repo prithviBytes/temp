@@ -1,105 +1,34 @@
-import { useState } from "react";
 import "../Styles/Navbar.css";
 
 export default function Navbar() {
-  const [isOpen, setOpen] = useState(true);
-  const toggleNavbar = () => {
-    setOpen((state) => !state);
-  };
   return (
-    <nav className={`Navbar ${isOpen ? "" : "Navbar-shrink"}`}>
+    <nav className="Navbar">
       <div className="Navbar-container">
-        <div
-          className={`Brand-container ${
-            !isOpen ? "Brand-container-shrink" : null
-          }`}
-        >
+        <div className="Brand-container">
           <i className="fab fa-artstation Brand-logo"></i>
-          <h2 className={`Brand-name ${isOpen ? "" : "hidden"}`}>Youtube</h2>
+          {/* <h2 className="Brand-name">Youtube</h2> */}
         </div>
-        <div
-          className={`Navbar-navigation ${
-            !isOpen ? "Navbar-navigation-shrink" : null
-          }`}
-        >
-          <div
-            className={`Navbar-item ${!isOpen ? "Navbar-item-shrink" : null}`}
-          >
-            <i
-              className={`fas fa-home Navbar-item-logo ${
-                !isOpen ? "Navbar-item-logo-shrink" : null
-              }`}
-            ></i>
-            <h4
-              className={`Navbar-item-text ${
-                !isOpen ? "Navbar-item-text-shrink" : null
-              }`}
-            >
-              Home
-            </h4>
+        <div className="Navbar-navigation">
+          <div className="Navbar-item">
+            <i className="fas fa-home Navbar-item-logo"></i>
+            <h4 className="Navbar-item-text">Home</h4>
           </div>
-          <div
-            className={`Navbar-item ${!isOpen ? "Navbar-item-shrink" : null}`}
-          >
-            <i
-              className={`fas fa-compact-disc Navbar-item-logo ${
-                !isOpen ? "Navbar-item-logo-shrink" : null
-              }`}
-            ></i>
-            <h4
-              className={`Navbar-item-text ${
-                !isOpen ? "Navbar-item-text-shrink" : null
-              }`}
-            >
-              Your Library
-            </h4>
+          <div className="Navbar-item">
+            <i className="fas fa-compact-disc Navbar-item-logo"></i>
+            <h4 className="Navbar-item-text">Your Library</h4>
           </div>
-          <div
-            className={`Navbar-item ${!isOpen ? "Navbar-item-shrink" : null}`}
-          >
-            <i
-              className={`far fa-clock Navbar-item-logo ${
-                !isOpen ? "Navbar-item-logo-shrink" : null
-              }`}
-            ></i>
-            <h4
-              className={`Navbar-item-text ${
-                !isOpen ? "Navbar-item-text-shrink" : null
-              }`}
-            >
-              Watch Later
-            </h4>
+          <div className="Navbar-item">
+            <i className="far fa-clock Navbar-item-logo"></i>
+            <h4 className="Navbar-item-text">Watch Later</h4>
           </div>
         </div>
-        <div
-          className={`Navbar-navigation ${
-            !isOpen ? "Navbar-navigation-shrink" : null
-          }`}
-        >
-          <div
-            className={`Navbar-item ${!isOpen ? "Navbar-item-shrink" : null}`}
-          >
-            <i
-              className={`fas fa-plus Navbar-item-logo ${
-                !isOpen ? "Navbar-item-logo-shrink" : null
-              }`}
-            ></i>
-            <h4
-              className={`Navbar-item-text ${
-                !isOpen ? "Navbar-item-text-shrink" : null
-              }`}
-            >
-              New Playlist
-            </h4>
+        <div className="Navbar-navigation">
+          <div className="Navbar-item">
+            <i className="fas fa-plus Navbar-item-logo"></i>
+            <h4 className="Navbar-item-text">New Playlist</h4>
           </div>
         </div>
       </div>
-      <i
-        onClick={toggleNavbar}
-        className={`far fa-arrow-alt-circle-left Navbar-toggler ${
-          isOpen ? "" : "rotate-180"
-        }`}
-      ></i>
     </nav>
   );
 }
