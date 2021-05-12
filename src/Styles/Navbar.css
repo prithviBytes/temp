@@ -13,6 +13,9 @@
   display: flex;
   flex-direction: column;
 }
+.Navbar-navlink {
+  text-decoration: none;
+}
 .Brand-container {
   display: flex;
   flex-direction: row;

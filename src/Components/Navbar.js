@@ -1,5 +1,5 @@
 import "../Styles/Navbar.css";
-
+import { NavLink, Navlink } from "react-router-dom";
 export default function Navbar() {
   return (
     <nav className="Navbar">
@@ -9,10 +9,12 @@ export default function Navbar() {
           {/* <h2 className="Brand-name">Youtube</h2> */}
         </div>
         <div className="Navbar-navigation">
-          <div className="Navbar-item">
-            <i className="fas fa-home Navbar-item-logo"></i>
-            <h4 className="Navbar-item-text">Home</h4>
-          </div>
+          <NavLink className="Navbar-navlink" to="/">
+            <div className="Navbar-item">
+              <i className="fas fa-home Navbar-item-logo"></i>
+              <h4 className="Navbar-item-text">Home</h4>
+            </div>
+          </NavLink>
           <div className="Navbar-item">
             <i className="fas fa-compact-disc Navbar-item-logo"></i>
             <h4 className="Navbar-item-text">Your Library</h4>
