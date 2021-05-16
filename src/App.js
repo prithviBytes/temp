@@ -3,6 +3,7 @@ import Appbar from "./Components/Appbar";
 import Snackbar from "./Components/Snackbar";
 import Homepage from "./Pages/Homepage";
 import Video from "./Pages/Video";
+import SearchPage from "./Pages/SearchPage";
 import PlaylistPage from "./Pages/PlaylistPage";
 import PlaylistVideos from "./Pages/PlaylistVideos";
 import { Routes, Route } from "react-router-dom";
@@ -22,6 +23,7 @@ export default function App() {
             <Route path="/video/:id" element={<Video />} />
             <Route path="/playlist" element={<PlaylistPage />} />
             <Route path="/playlist/:id" element={<PlaylistVideos />} />
+            <Route path="/search" element={<SearchPage />} />
           </Routes>
           <Snackbar />
         </PlaylistContextProvider>

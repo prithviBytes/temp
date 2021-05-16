@@ -21,7 +21,7 @@ export default function Navbar() {
               <h4 className="Navbar-item-text">Your Library</h4>
             </div>
           </NavLink>
-          <NavLink className="Navbar-navlink" to="/playlist/1">
+          <NavLink className="Navbar-navlink" to="/search">
             <div className="Navbar-item">
               <i className="fas fa-search Navbar-item-logo"></i>
               <h4 className="Navbar-item-text">Search</h4>
