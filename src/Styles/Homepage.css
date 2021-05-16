@@ -9,3 +9,8 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+@media (max-width: 600px) {
+  .Homepage {
+    margin-left: 0;
+  }
+}

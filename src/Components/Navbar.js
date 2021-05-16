@@ -15,21 +15,25 @@ export default function Navbar() {
               <h4 className="Navbar-item-text">Home</h4>
             </div>
           </NavLink>
-          <div className="Navbar-item">
-            <i className="fas fa-compact-disc Navbar-item-logo"></i>
-            <h4 className="Navbar-item-text">Your Library</h4>
-          </div>
-          <div className="Navbar-item">
-            <i className="far fa-clock Navbar-item-logo"></i>
-            <h4 className="Navbar-item-text">Watch Later</h4>
-          </div>
+          <NavLink className="Navbar-navlink" to="/playlist">
+            <div className="Navbar-item">
+              <i className="fas fa-compact-disc Navbar-item-logo"></i>
+              <h4 className="Navbar-item-text">Your Library</h4>
+            </div>
+          </NavLink>
+          <NavLink className="Navbar-navlink" to="/playlist/1">
+            <div className="Navbar-item">
+              <i className="fas fa-search Navbar-item-logo"></i>
+              <h4 className="Navbar-item-text">Search</h4>
+            </div>
+          </NavLink>
         </div>
-        <div className="Navbar-navigation">
+        {/* <div className="Navbar-navigation">
           <div className="Navbar-item">
             <i className="fas fa-plus Navbar-item-logo"></i>
             <h4 className="Navbar-item-text">New Playlist</h4>
           </div>
-        </div>
+        </div> */}
       </div>
     </nav>
   );

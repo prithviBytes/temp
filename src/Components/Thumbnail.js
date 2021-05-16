@@ -6,18 +6,18 @@ import { PlaylistContext } from "../Context/PlaylistContext";
 import { Link } from "react-router-dom";
 export default function Thumbnail({ video }) {
   const { playlist, playlistDispatch } = useContext(PlaylistContext);
-  const handlePlayList = (playlistName) => {
-    if (isObjectInArray(playlist[1].videos, video.id)) {
+  const handlePlayList = (playlistId) => {
+    if (isObjectInArray(playlist[playlistId].videos, video.id)) {
       playlistDispatch({
         type: playlistAction.REMOVE,
         payload: video,
-        id: 1
+        id: playlistId
       });
     } else {
       playlistDispatch({
         type: playlistAction.ADD,
         payload: video,
-        id: 1
+        id: playlistId
       });
     }
   };
@@ -45,12 +45,12 @@ export default function Thumbnail({ video }) {
         <div className="Button-container">
           <i
             title="Like"
-            onClick={() => handlePlayList("liked")}
+            onClick={() => handlePlayList(2)}
             class="Thumbnail-icon far fa-heart"
           ></i>
           <i
             title="Add to watch later"
-            onClick={() => handlePlayList("watchLater")}
+            onClick={() => handlePlayList(1)}
             class="Thumbnail-icon far fa-clock"
           ></i>
           <i class="Thumbnail-icon fas fa-plus"></i>

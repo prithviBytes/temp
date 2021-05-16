@@ -2,7 +2,7 @@
   z-index: 999;
   position: fixed;
   bottom: 30px;
-  left: 30px;
+  right: 30px;
   color: #fff;
   display: flex;
   padding: 15px 20px;
@@ -10,6 +10,7 @@
   flex-wrap: wrap;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   border-radius: 3px;
+  background-color: black;
   /* background-color: rgb(0, 184, 96); */
   /* background-color: rgb(208, 40, 56); */
   transform: translateY(0);
@@ -31,7 +32,7 @@
 }
 .Snackbar button {
   font-size: 20px;
-  color: #fff;
+  color: inherit;
   background: inherit;
   border: none;
   margin-left: 10px;

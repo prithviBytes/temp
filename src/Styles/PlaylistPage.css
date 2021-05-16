@@ -1,0 +1,52 @@
+.PlaylistPage {
+  padding-left: 100px;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+.Playlist-card {
+  margin: 20px;
+  width: 350px;
+  height: 200px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  padding-top: 30px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.Playlist-card:hover {
+  background: #000;
+}
+
+.Image-container-image {
+  display: inline-block;
+  max-height: 25%;
+  max-width: 30%;
+}
+.Image-container-image img {
+  max-height: 100%;
+  max-width: 100%;
+}
+.Images-container {
+  width: 300px;
+  margin: auto;
+  height: 150px;
+}
+.Playlist-details {
+  padding: 0 25px;
+}
+.Playlist-title {
+  text-align: center;
+  font-size: 18px;
+  padding-bottom: 25px;
+  font-weight: 500;
+  line-height: 20px;
+  max-height: 40px;
+  overflow: hidden;
+  color: #fff;
+}
+@media (max-width: 600px) {
+  .PlaylistPage {
+    padding-left: 0;
+  }
+}
