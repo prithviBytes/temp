@@ -1,48 +1,10 @@
 import "../Styles/Video.css";
 import { useParams } from "react-router-dom";
-import { generateData } from "../seedData";
 import moment from "moment";
 import faker from "faker";
-const video = {
-  kind: "youtube#searchResult",
-  etag: "lXMuKF30lZk37dv5xM5NnUJSHRE",
-  id: {
-    kind: "youtube#video",
-    videoId: "0pfsRS4AaL8"
-  },
-  snippet: {
-    publishedAt: "2021-05-16T19:35:20Z",
-    channelId: "UCSmENdCeOSL3oPbcP_FYfAg",
-    title: "Lionel Messi can&#39;t score a Header?",
-    description:
-      "HIT LIKE AND SUBSCRIBE ! Instagram: https://goo.gl/WrBPbj Twitter: https://goo.gl/OWZCBI.",
-    thumbnails: {
-      default: {
-        url: "https://i.ytimg.com/vi/0pfsRS4AaL8/default.jpg",
-        width: 120,
-        height: 90
-      },
-      medium: {
-        url: "https://i.ytimg.com/vi/0pfsRS4AaL8/mqdefault.jpg",
-        width: 320,
-        height: 180
-      },
-      high: {
-        url: "https://i.ytimg.com/vi/0pfsRS4AaL8/hqdefault.jpg",
-        width: 480,
-        height: 360
-      }
-    },
-    channelTitle: "SH10Comps",
-    liveBroadcastContent: "none",
-    publishTime: "2021-05-16T19:35:20Z"
-  }
-};
-const videos = generateData();
 export default function Video() {
   const { id } = useParams();
   // const currentVideo = videos.find((video) => video.embedId === id);
-  const currentVideo = video;
   return (
     <div className="VideoPage">
       <div className="VideoPage-container">
