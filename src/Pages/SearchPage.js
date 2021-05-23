@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import axios from "axios";
-import { API } from "../constants";
+import Thumbnaillist from "../Components/Thumbnaillist";
 import "../Styles/SearchPage.css";
 
 export default function SearchPage() {
@@ -20,7 +20,7 @@ export default function SearchPage() {
         const response = await axios.get(
           `https://Video-Library-Backend.prithvibytes.repl.co/search?keyword=${searchVideoString}`
         );
-        setSearchedVideos(response.data.data.items);
+        setSearchedVideos(response.data.videos);
       } catch (error) {
         setSearchedVideos(error);
       }
@@ -36,6 +36,7 @@ export default function SearchPage() {
           className="Search-box-input"
         />
       </form>
+      <Thumbnaillist videos={searchedVideos} />
     </div>
   );
 }
