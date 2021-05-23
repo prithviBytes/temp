@@ -9,7 +9,6 @@ import PlaylistVideos from "./Pages/PlaylistVideos";
 import { Routes, Route } from "react-router-dom";
 import { PlaylistContextProvider } from "./Context/PlaylistContext";
 import { FeedbackProvider } from "./Context/FeebackContext";
-import { VideoProvider } from "./Context/VideoContext";
 import "./styles.css";
 
 export default function App() {
@@ -17,18 +16,16 @@ export default function App() {
     <div className="App">
       <FeedbackProvider>
         <PlaylistContextProvider>
-          <VideoProvider>
-            <Navbar />
-            <Appbar />
-            <Routes>
-              <Route path="/" element={<Homepage />} />
-              <Route path="/video/:id" element={<Video />} />
-              <Route path="/playlist" element={<PlaylistPage />} />
-              <Route path="/playlist/:id" element={<PlaylistVideos />} />
-              <Route path="/search" element={<SearchPage />} />
-            </Routes>
-            <Snackbar />
-          </VideoProvider>
+          <Navbar />
+          <Appbar />
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/video/:id" element={<Video />} />
+            <Route path="/playlist" element={<PlaylistPage />} />
+            <Route path="/playlist/:id" element={<PlaylistVideos />} />
+            <Route path="/search" element={<SearchPage />} />
+          </Routes>
+          <Snackbar />
         </PlaylistContextProvider>
       </FeedbackProvider>
     </div>
