@@ -10,7 +10,7 @@ export default function PlaylistCard({ playlist }) {
         <div className="Images-container">
           {playlist.videos.slice(0, 6).map((video) => (
             <div className="Image-container-image">
-              <img src={video.thumbnailImage} alt="" />
+              <img src={video.images.high.url} alt="" />
             </div>
           ))}
         </div>

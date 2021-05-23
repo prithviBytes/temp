@@ -14,8 +14,9 @@ export default function Video() {
         <div className="VideoPage-container-left">
           <div className="VideoPage-iframe-container">
             <iframe
-              width="560"
-              height="315"
+              // width="560"
+              // height="315"
+              className="VideoPage-iframe"
               src={`https://www.youtube.com/embed/${currentVideo.id}`}
               title="YouTube video player"
               frameborder="0"

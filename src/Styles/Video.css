@@ -7,6 +7,10 @@
   display: flex;
   flex-direction: row;
 }
+.VideoPage-iframe {
+  width: 90%;
+  height: 315px;
+}
 .VideoPage-container-left {
   min-width: 670px;
   padding: 30px 20px;
@@ -78,6 +82,7 @@
 .VideoPage-owner {
   font-size: 14px;
   font-weight: 500;
+  border-bottom: 2px solid #181818;
 }
 .VideoPage-icon {
   font-size: 21px;
@@ -112,4 +117,16 @@
 .Thumbnail-horizontal img {
   width: 168px;
   height: 94px;
+}
+@media (max-width: 700px) {
+  .VideoPage {
+    margin-left: 0;
+    padding: 0;
+  }
+  .VideoPage-container {
+    flex-direction: column;
+  }
+  .VideoPage-container-left {
+    max-width: 80%;
+  }
 }
