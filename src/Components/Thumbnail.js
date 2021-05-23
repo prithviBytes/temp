@@ -1,9 +1,11 @@
 import "../Styles/Thumbnail.css";
+import moment from "moment";
 import { playlistAction } from "../constants";
 import { isObjectInArray } from "../helpers";
 import { useContext } from "react";
 import { PlaylistContext } from "../Context/PlaylistContext";
 import { Link } from "react-router-dom";
+import faker from "faker";
 export default function Thumbnail({ video }) {
   const { playlist, playlistDispatch } = useContext(PlaylistContext);
   const handlePlayList = (playlistId) => {
@@ -23,23 +25,23 @@ export default function Thumbnail({ video }) {
   };
   return (
     <div className="Thumbnail-container">
-      <Link style={{ textDecoration: "none" }} to={`/video/${video.embedId}`}>
+      <Link style={{ textDecoration: "none" }} to={`/video/${video.id}`}>
         <img
           className="Thumbnail-image"
-          src={video.thumbnailImage}
+          src={video.images.high.url}
           alt="Thumbnail"
         />
       </Link>
       <div className="Thumbnail-details">
         <div className="Avatar-container">
-          <img className="Avatar" src={video.avatar} alt="avatar" />
+          <img className="Avatar" src={faker.image.avatar()} alt="avatar" />
         </div>
         <div className="Video-info">
           <p className="Video-title">{video.title}</p>
-          <p className="Video-owner">{video.owner}</p>
+          <p className="Video-owner">{video.channelTitle}</p>
           <div className="Video-Additional-details">
             <span>{video.views}</span>&nbsp;&#xb7;&nbsp;
-            <span>{video.age}</span>
+            <span>{moment(video.publishedAt).fromNow()}</span>
           </div>
         </div>
         <div className="Button-container">

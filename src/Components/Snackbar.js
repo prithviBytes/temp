@@ -18,7 +18,7 @@ export default function Snackbar() {
     >
       <p>{state.text}</p>
       <button onClick={() => feedbackDispatch({ type: "HIDE" })}>
-        <i class="fas fa-times"></i>
+        <i className="fas fa-times"></i>
       </button>
     </div>
   );

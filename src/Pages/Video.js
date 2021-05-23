@@ -1,16 +1,48 @@
 import "../Styles/Video.css";
 import { useParams } from "react-router-dom";
 import { generateData } from "../seedData";
+import moment from "moment";
+import faker from "faker";
 const video = {
-  title: "Shutter Island (2010) Trailer #1 | Movieclips Classic Trailers",
-  embedId: "v8yrZSkKxTA",
-  thumbnailImage:
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3B0g5RSUqksu1WXzn8uyZYgaFZu7Q3mfTtA&usqp=CAU"
+  kind: "youtube#searchResult",
+  etag: "lXMuKF30lZk37dv5xM5NnUJSHRE",
+  id: {
+    kind: "youtube#video",
+    videoId: "0pfsRS4AaL8"
+  },
+  snippet: {
+    publishedAt: "2021-05-16T19:35:20Z",
+    channelId: "UCSmENdCeOSL3oPbcP_FYfAg",
+    title: "Lionel Messi can&#39;t score a Header?",
+    description:
+      "HIT LIKE AND SUBSCRIBE ! Instagram: https://goo.gl/WrBPbj Twitter: https://goo.gl/OWZCBI.",
+    thumbnails: {
+      default: {
+        url: "https://i.ytimg.com/vi/0pfsRS4AaL8/default.jpg",
+        width: 120,
+        height: 90
+      },
+      medium: {
+        url: "https://i.ytimg.com/vi/0pfsRS4AaL8/mqdefault.jpg",
+        width: 320,
+        height: 180
+      },
+      high: {
+        url: "https://i.ytimg.com/vi/0pfsRS4AaL8/hqdefault.jpg",
+        width: 480,
+        height: 360
+      }
+    },
+    channelTitle: "SH10Comps",
+    liveBroadcastContent: "none",
+    publishTime: "2021-05-16T19:35:20Z"
+  }
 };
 const videos = generateData();
 export default function Video() {
   const { id } = useParams();
-  const currentVideo = videos.find((video) => video.embedId === id);
+  // const currentVideo = videos.find((video) => video.embedId === id);
+  const currentVideo = video;
   return (
     <div className="VideoPage">
       <div className="VideoPage-container">
@@ -19,18 +51,18 @@ export default function Video() {
             <iframe
               width="560"
               height="315"
-              src={`https://www.youtube.com/embed/${currentVideo.embedId}`}
+              src={`https://www.youtube.com/embed/${currentVideo.id.videoId}`}
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
           </div>
-          <h2 className="VideoPage-title">{currentVideo.title}</h2>
+          <h2 className="VideoPage-title">{currentVideo.snippet.title}</h2>
           <div className="VideoPage-info">
             <div className="VideoPage-stats">
-              <span>{currentVideo.views} views</span>&nbsp;&#xb7;&nbsp;
-              <span>{currentVideo.age}</span>
+              <span>1.1M views</span>&nbsp;&#xb7;&nbsp;
+              <span>{moment(currentVideo.snippet.publishedAt).fromNow()}</span>
             </div>
             <div className="VideoPage-actions">
               <span className="VideoPage-action-button">
@@ -48,8 +80,14 @@ export default function Video() {
             </div>
           </div>
           <div className="VideoPage-additional">
-            <img className="VideoPage-avatar" src={videos[0].avatar} alt="" />
-            <p className="VideoPage-owner">{videos[0].owner}</p>
+            <img
+              className="VideoPage-avatar"
+              src={faker.image.avatar()}
+              alt=""
+            />
+            <p className="VideoPage-owner">
+              {currentVideo.snippet.channelTitle}
+            </p>
           </div>
         </div>
         <div className="VideoPage-container-right">
