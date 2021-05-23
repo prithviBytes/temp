@@ -1,6 +1,4 @@
 import Thumbnail from "./Thumbnail";
-import { useContext } from "react";
-import { VideoContext } from "../Context/VideoContext";
 export default function ThumbnailList({ videos }) {
   return (
     <div className="ThumbnailList-container">
