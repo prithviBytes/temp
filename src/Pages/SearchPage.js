@@ -1,11 +1,13 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useContext } from "react";
 import axios from "axios";
 import Thumbnaillist from "../Components/Thumbnaillist";
+import { VideoContext } from "../Context/VideoContext";
 import "../Styles/SearchPage.css";
 
 export default function SearchPage() {
   const [searchVideoString, setSearchVideoString] = useState("");
   const [searchedVideos, setSearchedVideos] = useState();
+  const { setContextVideos } = useContext(VideoContext);
   const inputRef = useRef();
   function handleSubmit(event) {
     event.preventDefault();
@@ -21,6 +23,7 @@ export default function SearchPage() {
           `https://Video-Library-Backend.prithvibytes.repl.co/search?keyword=${searchVideoString}`
         );
         setSearchedVideos(response.data.videos);
+        setContextVideos(response.data.videos);
       } catch (error) {
         setSearchedVideos(error);
       }

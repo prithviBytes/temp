@@ -1,3 +1,6 @@
+.SearchPage {
+  margin-left: 100px;
+}
 .Search-box {
   display: flex;
   max-width: 400px;
