@@ -4,6 +4,7 @@ import moment from "moment";
 import faker from "faker";
 import { VideoContext } from "../Context/VideoContext";
 import { useContext } from "react";
+import { unitizeNumber } from "../helpers";
 export default function Video() {
   const { contextVideos } = useContext(VideoContext);
   const { id } = useParams();
@@ -25,7 +26,7 @@ export default function Video() {
           <h2 className="VideoPage-title">{currentVideo.title}</h2>
           <div className="VideoPage-info">
             <div className="VideoPage-stats">
-              <span>{currentVideo.views}</span>&nbsp;&#xb7;&nbsp;
+              <span>{unitizeNumber(currentVideo.views)}</span>&nbsp;&#xb7;&nbsp;
               <span>{moment(currentVideo.publishedAt).fromNow()}</span>
             </div>
             <div className="VideoPage-actions">
@@ -64,7 +65,7 @@ export default function Video() {
                     {video.channelTitle}
                   </p>
                   <p className="Thumbnail-horizontal-stats">
-                    {video.views}&nbsp;&#xb7;&nbsp;
+                    {unitizeNumber(video.views)}&nbsp;&#xb7;&nbsp;
                     {moment(video.publishedAt).fromNow()}
                   </p>
                 </div>

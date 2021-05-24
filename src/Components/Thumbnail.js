@@ -1,7 +1,7 @@
 import "../Styles/Thumbnail.css";
 import moment from "moment";
 import { playlistAction } from "../constants";
-import { isObjectInArray } from "../helpers";
+import { isObjectInArray, unitizeNumber } from "../helpers";
 import { useContext } from "react";
 import { PlaylistContext } from "../Context/PlaylistContext";
 import { Link } from "react-router-dom";
@@ -40,7 +40,7 @@ export default function Thumbnail({ video }) {
           <p className="Video-title">{video.title}</p>
           <p className="Video-owner">{video.channelTitle}</p>
           <div className="Video-Additional-details">
-            <span>{video.views}</span>&nbsp;&#xb7;&nbsp;
+            <span>{unitizeNumber(video.views)}</span>&nbsp;&#xb7;&nbsp;
             <span>{moment(video.publishedAt).fromNow()}</span>
           </div>
         </div>
