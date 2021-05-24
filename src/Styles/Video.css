@@ -7,9 +7,13 @@
   display: flex;
   flex-direction: row;
 }
+.VideoPage-iframe-container {
+  width: 100%;
+}
 .VideoPage-iframe {
-  width: 90%;
+  min-width: 90%;
   height: 315px;
+  margin: auto;
 }
 .VideoPage-container-left {
   min-width: 670px;
@@ -29,10 +33,6 @@
 }
 .VideoPage-container-right::-webkit-scrollbar {
   width: 0;
-}
-.VideoPage-iframe-container {
-  margin: auto;
-  width: 560px;
 }
 .VideoPage-title {
   margin-top: 20px;
@@ -127,6 +127,10 @@
     flex-direction: column;
   }
   .VideoPage-container-left {
-    max-width: 80%;
+    min-width: 100%;
+    padding: 30px 0;
+  }
+  .VideoPage-iframe {
+    height: 250px;
   }
 }
