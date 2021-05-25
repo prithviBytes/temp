@@ -3,6 +3,7 @@ import Appbar from "./Components/Appbar";
 import Snackbar from "./Components/Snackbar";
 import Homepage from "./Pages/Homepage";
 import Video from "./Pages/Video";
+import ProtectedRoutes from "./Components/ProtectedRoutes";
 import SearchPage from "./Pages/SearchPage";
 import PlaylistPage from "./Pages/PlaylistPage";
 import PlaylistVideos from "./Pages/PlaylistVideos";
@@ -23,7 +24,7 @@ export default function App() {
             <Routes>
               <Route path="/" element={<Homepage />} />
               <Route path="/video/:id" element={<Video />} />
-              <Route path="/playlist" element={<PlaylistPage />} />
+              <ProtectedRoutes path="/playlist" element={<PlaylistPage />} />
               <Route path="/playlist/:id" element={<PlaylistVideos />} />
               <Route path="/search" element={<SearchPage />} />
             </Routes>

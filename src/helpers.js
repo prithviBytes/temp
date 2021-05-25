@@ -7,8 +7,6 @@ export function isObjectInArray(arr, id) {
   return false;
 }
 
-console.log(unitizeNumber(560343421));
-
 export function unitizeNumber(number) {
   const stringNumber = number.toString();
   const length = stringNumber.length;
