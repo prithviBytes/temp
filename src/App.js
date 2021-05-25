@@ -11,6 +11,7 @@ import { Routes, Route } from "react-router-dom";
 import { PlaylistContextProvider } from "./Context/PlaylistContext";
 import { FeedbackProvider } from "./Context/FeebackContext";
 import { VideoProvider } from "./Context/VideoContext";
+import Login from "./Pages/Login";
 import "./styles.css";
 
 export default function App() {
@@ -27,6 +28,7 @@ export default function App() {
               <ProtectedRoutes path="/playlist" element={<PlaylistPage />} />
               <Route path="/playlist/:id" element={<PlaylistVideos />} />
               <Route path="/search" element={<SearchPage />} />
+              <Route path="/login" element={<Login />} />
             </Routes>
             <Snackbar />
           </VideoProvider>
