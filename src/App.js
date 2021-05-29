@@ -11,29 +11,32 @@ import { Routes, Route } from "react-router-dom";
 import { PlaylistContextProvider } from "./Context/PlaylistContext";
 import { FeedbackProvider } from "./Context/FeebackContext";
 import { VideoProvider } from "./Context/VideoContext";
+import { AuthProvider } from "./Context/AuthContext";
 import Login from "./Pages/Login";
 import "./styles.css";
 
 export default function App() {
   return (
     <div className="App">
-      <FeedbackProvider>
-        <PlaylistContextProvider>
-          <VideoProvider>
-            <Navbar />
-            <Appbar />
-            <Routes>
-              <Route path="/" element={<Homepage />} />
-              <Route path="/video/:id" element={<Video />} />
-              <ProtectedRoutes path="/playlist" element={<PlaylistPage />} />
-              <Route path="/playlist/:id" element={<PlaylistVideos />} />
-              <Route path="/search" element={<SearchPage />} />
-              <Route path="/login" element={<Login />} />
-            </Routes>
-            <Snackbar />
-          </VideoProvider>
-        </PlaylistContextProvider>
-      </FeedbackProvider>
+      <AuthProvider>
+        <FeedbackProvider>
+          <PlaylistContextProvider>
+            <VideoProvider>
+              <Navbar />
+              <Appbar />
+              <Routes>
+                <Route path="/" element={<Homepage />} />
+                <Route path="/video/:id" element={<Video />} />
+                <ProtectedRoutes path="/playlist" element={<PlaylistPage />} />
+                <Route path="/playlist/:id" element={<PlaylistVideos />} />
+                <Route path="/search" element={<SearchPage />} />
+                <Route path="/login" element={<Login />} />
+              </Routes>
+              <Snackbar />
+            </VideoProvider>
+          </PlaylistContextProvider>
+        </FeedbackProvider>
+      </AuthProvider>
     </div>
   );
 }

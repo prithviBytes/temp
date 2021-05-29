@@ -48,14 +48,14 @@ export default function Thumbnail({ video }) {
           <i
             title="Like"
             onClick={() => handlePlayList(2)}
-            class="Thumbnail-icon far fa-heart"
+            className="Thumbnail-icon far fa-heart"
           ></i>
           <i
             title="Add to watch later"
             onClick={() => handlePlayList(1)}
-            class="Thumbnail-icon far fa-clock"
+            className="Thumbnail-icon far fa-clock"
           ></i>
-          <i class="Thumbnail-icon fas fa-plus"></i>
+          <i className="Thumbnail-icon fas fa-plus"></i>
         </div>
       </div>
     </div>
