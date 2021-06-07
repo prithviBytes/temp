@@ -1,7 +1,6 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../Context/AuthContext";
 import { useLocation, useNavigate } from "react-router-dom";
-import axios from "axios";
 import "../Styles/Login.css";
 
 export default function Login() {

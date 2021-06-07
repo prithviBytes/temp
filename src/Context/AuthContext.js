@@ -18,7 +18,7 @@ export function AuthProvider({ children }) {
         user
       );
       setUser(response.data);
-      isLoggedIn(true);
+      setLoggedIn(true);
       return true;
     } catch (error) {
       return false;

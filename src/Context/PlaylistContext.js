@@ -46,17 +46,17 @@ export function PlaylistContextProvider({ children }) {
     }
   }
   const initialPlaylist = {
-    1: {
+    watchLater: {
       name: "Watch later",
       playlistId: 1,
       videos: []
     },
-    2: {
+    liked: {
       name: "Liked Videos",
       playlistId: 2,
       videos: []
     },
-    3: {
+    history: {
       name: "History",
       playlistId: 3,
       videos: []
