@@ -49,6 +49,11 @@ export function AuthProvider({ children }) {
       return false;
     }
   }
+  async function logout() {
+    localStorage.removeItem(user);
+    setLoggedIn(false);
+    setUser({});
+  }
   const value = {
     register,
     login,
