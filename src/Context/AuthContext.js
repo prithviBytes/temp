@@ -1,10 +1,17 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import axios from "axios";
 export const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
   const [isLoggedIn, setLoggedIn] = useState(false);
   const [user, setUser] = useState({});
+  useEffect(() => {
+    const storeData = JSON.parse(localStorage.getItem(user));
+    if (storeData) {
+      setUser(storeData);
+      setLoggedIn(true);
+    }
+  }, []);
   async function register(email, username, password) {
     console.log("Registeriinng");
     const user = {
@@ -35,6 +42,7 @@ export function AuthProvider({ children }) {
         user
       );
       setUser(response.data);
+      localStorage.setItem(JSON.stringify(response.data), user);
       isLoggedIn(true);
       return true;
     } catch (error) {
