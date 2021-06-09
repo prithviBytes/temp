@@ -15,13 +15,13 @@ export default function Login() {
     event.preventDefault();
     if (hasAccount) {
       if (await login()) {
-        navigate("/");
+        navigate(state?.from ? state.from : "/");
       } else {
         console.log("Something went wrong");
       }
     } else {
       if (await register()) {
-        navigate("/");
+        navigate(state?.from ? state.from : "/");
       } else {
         console.log("Something went wrong");
       }

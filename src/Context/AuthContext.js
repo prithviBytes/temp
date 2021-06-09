@@ -43,7 +43,8 @@ export function AuthProvider({ children }) {
   }
   const value = {
     register,
-    login
+    login,
+    isLoggedIn
   };
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }

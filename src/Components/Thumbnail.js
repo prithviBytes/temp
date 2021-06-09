@@ -5,10 +5,18 @@ import { isObjectInArray, unitizeNumber } from "../helpers";
 import { useContext } from "react";
 import { PlaylistContext } from "../Context/PlaylistContext";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Context/AuthContext";
+import { useNavigate } from "react-router-dom";
 import faker from "faker";
 export default function Thumbnail({ video }) {
+  const { isLoggedIn } = useContext(AuthContext);
+  const navigate = useNavigate();
   const { playlist, playlistDispatch } = useContext(PlaylistContext);
   const handlePlayList = (playlistId) => {
+    if (!isLoggedIn) {
+      navigate("/login");
+      return;
+    }
     if (isObjectInArray(playlist[playlistId].videos, video.id)) {
       playlistDispatch({
         type: playlistAction.REMOVE,

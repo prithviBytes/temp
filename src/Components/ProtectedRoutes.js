@@ -1,7 +1,8 @@
+import { useContext } from "react";
 import { Route, Navigate } from "react-router-dom";
-
+import { AuthContext } from "../Context/AuthContext";
 export default function ProtectedRoute({ path, ...props }) {
-  const isLoggedIn = false;
+  const { isLoggedIn } = useContext(AuthContext);
   return isLoggedIn ? (
     <Route path={path} {...props} />
   ) : (
